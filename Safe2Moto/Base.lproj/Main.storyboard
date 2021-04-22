@@ -19,15 +19,88 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKz-ZM-SHI" userLabel="Safety Heading">
-                                <rect key="frame" x="0.0" y="88" width="428" height="226"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <rect key="frame" x="0.0" y="88" width="428" height="200"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LP0-Ta-K0o">
+                                        <rect key="frame" x="8" y="8" width="372" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDF-lz-YyA">
+                                        <rect key="frame" x="8" y="50" width="412" height="142"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Enter City Name]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgc-uY-Mu0">
+                                                <rect key="frame" x="113.00000000000001" y="31" width="186.33333333333337" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="eCA-N4-Nwa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[To Begin Safety Rating]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKY-Zh-28y">
+                                                <rect key="frame" x="59" y="69" width="294" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="MJv-ZC-veM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstItem="tgc-uY-Mu0" firstAttribute="top" secondItem="TDF-lz-YyA" secondAttribute="top" constant="31" id="36l-xq-fCb"/>
+                                            <constraint firstItem="xKY-Zh-28y" firstAttribute="top" secondItem="tgc-uY-Mu0" secondAttribute="bottom" constant="8" symbolic="YES" id="F5v-lD-dpS"/>
+                                            <constraint firstItem="xKY-Zh-28y" firstAttribute="centerX" secondItem="TDF-lz-YyA" secondAttribute="centerX" id="WmJ-da-Y1c"/>
+                                            <constraint firstItem="tgc-uY-Mu0" firstAttribute="centerX" secondItem="TDF-lz-YyA" secondAttribute="centerX" id="hog-Rl-Yw4"/>
+                                            <constraint firstItem="xKY-Zh-28y" firstAttribute="top" secondItem="tgc-uY-Mu0" secondAttribute="bottom" constant="8" symbolic="YES" id="k8S-OB-DQ6"/>
+                                            <constraint firstAttribute="bottom" secondItem="xKY-Zh-28y" secondAttribute="bottom" constant="37" id="rRp-6T-ThA"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmH-kL-OlW">
+                                        <rect key="frame" x="386" y="9" width="34" height="32.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="ULM-1U-Rtf"/>
+                                            <constraint firstAttribute="width" constant="34" id="Yld-Oo-d3N"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="linkColor"/>
+                                        <state key="normal" backgroundImage="magnifyingglass.circle" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSearchButton:" destination="gas-ug-yRR" eventType="touchUpInside" id="5mH-gO-Qnj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="226" id="Cfp-Dj-48g"/>
+                                    <constraint firstItem="TDF-lz-YyA" firstAttribute="top" secondItem="LP0-Ta-K0o" secondAttribute="bottom" constant="8" id="3hu-SU-JP0"/>
+                                    <constraint firstAttribute="height" constant="200" id="Cfp-Dj-48g"/>
+                                    <constraint firstAttribute="bottom" secondItem="TDF-lz-YyA" secondAttribute="bottom" constant="8" id="GkM-Mb-yoB"/>
+                                    <constraint firstAttribute="trailing" secondItem="VmH-kL-OlW" secondAttribute="trailing" constant="8" id="P1p-6n-RHY"/>
+                                    <constraint firstAttribute="trailing" secondItem="TDF-lz-YyA" secondAttribute="trailing" constant="8" id="Vvy-Wc-dFp"/>
+                                    <constraint firstItem="LP0-Ta-K0o" firstAttribute="top" secondItem="bKz-ZM-SHI" secondAttribute="top" constant="8" id="eU5-YJ-LuX"/>
+                                    <constraint firstItem="TDF-lz-YyA" firstAttribute="top" secondItem="VmH-kL-OlW" secondAttribute="bottom" constant="8" symbolic="YES" id="ncy-wg-ZXk"/>
+                                    <constraint firstItem="TDF-lz-YyA" firstAttribute="leading" secondItem="bKz-ZM-SHI" secondAttribute="leading" constant="8" id="r4b-BB-U8g"/>
+                                    <constraint firstItem="LP0-Ta-K0o" firstAttribute="leading" secondItem="bKz-ZM-SHI" secondAttribute="leading" constant="8" id="rF0-Yn-k5H"/>
+                                    <constraint firstItem="VmH-kL-OlW" firstAttribute="leading" secondItem="LP0-Ta-K0o" secondAttribute="trailing" constant="6" id="rMv-qw-sr0"/>
+                                    <constraint firstItem="VmH-kL-OlW" firstAttribute="top" secondItem="bKz-ZM-SHI" secondAttribute="top" constant="8" id="zoW-sL-jzp"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R3l-oy-xiQ">
-                                <rect key="frame" x="0.0" y="314" width="428" height="612"/>
+                                <rect key="frame" x="0.0" y="288" width="428" height="638"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailsTableViewCell" id="ltr-nt-ChO" customClass="DetailsTableViewCell" customModule="Safe2Moto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="428" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ltr-nt-ChO" id="gEg-S9-0AI">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5DG-Js-dqK"/>
@@ -45,12 +118,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Safe2Moto" id="gmO-IY-939">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="uq7-xE-hSn"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="uq7-xE-hSn">
+                            <color key="tintColor" systemColor="linkColor"/>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cityNameField" destination="LP0-Ta-K0o" id="aaf-Pm-LgR"/>
+                        <outlet property="cityNameLabel" destination="tgc-uY-Mu0" id="8HK-6U-0vu"/>
+                        <outlet property="safetyRatingBanner" destination="TDF-lz-YyA" id="l41-gw-VZL"/>
+                        <outlet property="safetyRatingLabel" destination="xKY-Zh-28y" id="NOr-bS-9KD"/>
+                        <outlet property="tableView" destination="R3l-oy-xiQ" id="pwb-vs-rYF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oga-nd-vC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621.7391304347827" y="10.714285714285714"/>
+            <point key="canvasLocation" x="1516.8224299065419" y="11.663066954643629"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3hN-jC-oMA">
@@ -60,6 +142,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RKI-xZ-61k">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemGray5Color"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -72,14 +155,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass.circle" catalog="system" width="128" height="121"/>
         <namedColor name="Background Custom">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
