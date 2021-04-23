@@ -98,6 +98,31 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ltr-nt-ChO" id="gEg-S9-0AI">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Riding Condition]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOF-By-pCq">
+                                                    <rect key="frame" x="20" y="10" width="167" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="167" id="Im3-6F-iPF"/>
+                                                        <constraint firstAttribute="height" constant="24" id="o79-eF-mvN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Result Condition]" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8d4-2f-YnR">
+                                                    <rect key="frame" x="195" y="10" width="213" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8d4-2f-YnR" secondAttribute="trailing" constant="20" symbolic="YES" id="Cdz-Cp-xeL"/>
+                                                <constraint firstItem="yOF-By-pCq" firstAttribute="leading" secondItem="gEg-S9-0AI" secondAttribute="leading" constant="20" symbolic="YES" id="D88-Wa-OIa"/>
+                                                <constraint firstItem="yOF-By-pCq" firstAttribute="centerY" secondItem="gEg-S9-0AI" secondAttribute="centerY" id="FIW-yS-NgK"/>
+                                                <constraint firstItem="8d4-2f-YnR" firstAttribute="leading" secondItem="yOF-By-pCq" secondAttribute="trailing" constant="8" id="FbB-My-VaV"/>
+                                                <constraint firstItem="8d4-2f-YnR" firstAttribute="centerY" secondItem="gEg-S9-0AI" secondAttribute="centerY" id="WuN-68-pIv"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>

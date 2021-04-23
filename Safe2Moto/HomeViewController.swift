@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  Safe2Moto
 //
-//  Created by Gerardo Barcenas Jr. on 4/22/21.
+//  Created by Gerardo Barcenas Jr. on 4/22/21.LinkedIn Optimization Walkthrough
 //
 
 import UIKit
